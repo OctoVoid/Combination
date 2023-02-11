@@ -123,9 +123,9 @@ namespace Combination.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap newGame {
+        internal static System.Drawing.Bitmap newGame1 {
             get {
-                object obj = ResourceManager.GetObject("newGame", resourceCulture);
+                object obj = ResourceManager.GetObject("newGame1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

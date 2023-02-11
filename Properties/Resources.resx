@@ -118,43 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="blackBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\blackBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="greenBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\greenBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blueBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\blueBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="board" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="galaxyBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\galaxyBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="greenBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\greenBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="move" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="newGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\newGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="redBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\redBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\no.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="violetBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\violetBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="galaxyBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\galaxyBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="move" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="orangeBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\orangeBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="redBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\redBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blackBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\blackBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="violetBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\violetBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="board" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\board.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="whiteBall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\whiteBall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newGame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\newGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="newGame1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\newGame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

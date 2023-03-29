@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.newGameButton = new System.Windows.Forms.PictureBox();
             this.check10_5 = new System.Windows.Forms.PictureBox();
             this.check9_5 = new System.Windows.Forms.PictureBox();
             this.check8_5 = new System.Windows.Forms.PictureBox();
@@ -138,8 +142,11 @@
             this.redBox = new System.Windows.Forms.PictureBox();
             this.orangeBox = new System.Windows.Forms.PictureBox();
             this.greenBox = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGameButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.check10_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.check9_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.check8_5)).BeginInit();
@@ -254,7 +261,12 @@
             // 
             this.panel1.BackgroundImage = global::Combination.Properties.Resources.board;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.newGameButton);
             this.panel1.Controls.Add(this.check10_5);
             this.panel1.Controls.Add(this.check9_5);
             this.panel1.Controls.Add(this.check8_5);
@@ -368,16 +380,64 @@
             this.panel1.Size = new System.Drawing.Size(548, 781);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Combination.Properties.Resources.newGame1;
-            this.pictureBox1.Location = new System.Drawing.Point(69, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(240, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "in the wrong spot";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(85, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "in the right spot";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Combination.Properties.Resources.yes;
+            this.pictureBox2.Location = new System.Drawing.Point(65, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Combination.Properties.Resources.move;
+            this.pictureBox3.Location = new System.Drawing.Point(220, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // newGameButton
+            // 
+            this.newGameButton.BackColor = System.Drawing.Color.Transparent;
+            this.newGameButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newGameButton.Image = global::Combination.Properties.Resources.newGame1;
+            this.newGameButton.Location = new System.Drawing.Point(380, 61);
+            this.newGameButton.Name = "newGameButton";
+            this.newGameButton.Size = new System.Drawing.Size(90, 32);
+            this.newGameButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.newGameButton.TabIndex = 11;
+            this.newGameButton.TabStop = false;
+            this.newGameButton.Click += new System.EventHandler(this.NewGame);
             // 
             // check10_5
             // 
@@ -862,6 +922,7 @@
             // check1_2
             // 
             this.check1_2.BackColor = System.Drawing.Color.Transparent;
+            this.check1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.check1_2.Location = new System.Drawing.Point(387, 608);
             this.check1_2.Name = "check1_2";
             this.check1_2.Size = new System.Drawing.Size(20, 20);
@@ -1382,6 +1443,7 @@
             // blackBox
             // 
             this.blackBox.BackColor = System.Drawing.Color.Transparent;
+            this.blackBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.blackBox.Image = global::Combination.Properties.Resources.blackBall;
             this.blackBox.Location = new System.Drawing.Point(434, 672);
             this.blackBox.Name = "blackBox";
@@ -1389,10 +1451,13 @@
             this.blackBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blackBox.TabIndex = 7;
             this.blackBox.TabStop = false;
+            this.blackBox.Tag = "8";
+            this.blackBox.Click += new System.EventHandler(this.UserInput);
             // 
             // whiteBox
             // 
             this.whiteBox.BackColor = System.Drawing.Color.Transparent;
+            this.whiteBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.whiteBox.Image = global::Combination.Properties.Resources.whiteBall;
             this.whiteBox.Location = new System.Drawing.Point(382, 672);
             this.whiteBox.Name = "whiteBox";
@@ -1400,10 +1465,13 @@
             this.whiteBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.whiteBox.TabIndex = 6;
             this.whiteBox.TabStop = false;
+            this.whiteBox.Tag = "7";
+            this.whiteBox.Click += new System.EventHandler(this.UserInput);
             // 
             // galaxyBox
             // 
             this.galaxyBox.BackColor = System.Drawing.Color.Transparent;
+            this.galaxyBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.galaxyBox.Image = global::Combination.Properties.Resources.galaxyBall;
             this.galaxyBox.Location = new System.Drawing.Point(329, 672);
             this.galaxyBox.Name = "galaxyBox";
@@ -1411,10 +1479,13 @@
             this.galaxyBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.galaxyBox.TabIndex = 5;
             this.galaxyBox.TabStop = false;
+            this.galaxyBox.Tag = "6";
+            this.galaxyBox.Click += new System.EventHandler(this.UserInput);
             // 
             // blueBox
             // 
             this.blueBox.BackColor = System.Drawing.Color.Transparent;
+            this.blueBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.blueBox.Image = global::Combination.Properties.Resources.blueBall;
             this.blueBox.Location = new System.Drawing.Point(277, 672);
             this.blueBox.Name = "blueBox";
@@ -1422,10 +1493,13 @@
             this.blueBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blueBox.TabIndex = 4;
             this.blueBox.TabStop = false;
+            this.blueBox.Tag = "5";
+            this.blueBox.Click += new System.EventHandler(this.UserInput);
             // 
             // violetBox
             // 
             this.violetBox.BackColor = System.Drawing.Color.Transparent;
+            this.violetBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.violetBox.Image = global::Combination.Properties.Resources.violetBall;
             this.violetBox.Location = new System.Drawing.Point(225, 672);
             this.violetBox.Name = "violetBox";
@@ -1433,10 +1507,13 @@
             this.violetBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.violetBox.TabIndex = 3;
             this.violetBox.TabStop = false;
+            this.violetBox.Tag = "4";
+            this.violetBox.Click += new System.EventHandler(this.UserInput);
             // 
             // redBox
             // 
             this.redBox.BackColor = System.Drawing.Color.Transparent;
+            this.redBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.redBox.Image = global::Combination.Properties.Resources.redBall;
             this.redBox.Location = new System.Drawing.Point(173, 672);
             this.redBox.Name = "redBox";
@@ -1444,10 +1521,13 @@
             this.redBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.redBox.TabIndex = 2;
             this.redBox.TabStop = false;
+            this.redBox.Tag = "3";
+            this.redBox.Click += new System.EventHandler(this.UserInput);
             // 
             // orangeBox
             // 
             this.orangeBox.BackColor = System.Drawing.Color.Transparent;
+            this.orangeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.orangeBox.Image = global::Combination.Properties.Resources.orangeBall;
             this.orangeBox.Location = new System.Drawing.Point(121, 672);
             this.orangeBox.Name = "orangeBox";
@@ -1455,10 +1535,13 @@
             this.orangeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.orangeBox.TabIndex = 1;
             this.orangeBox.TabStop = false;
+            this.orangeBox.Tag = "2";
+            this.orangeBox.Click += new System.EventHandler(this.UserInput);
             // 
             // greenBox
             // 
             this.greenBox.BackColor = System.Drawing.Color.Transparent;
+            this.greenBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.greenBox.Image = global::Combination.Properties.Resources.greenBall;
             this.greenBox.Location = new System.Drawing.Point(69, 672);
             this.greenBox.Name = "greenBox";
@@ -1466,6 +1549,22 @@
             this.greenBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.greenBox.TabIndex = 0;
             this.greenBox.TabStop = false;
+            this.greenBox.Tag = "1";
+            this.greenBox.Click += new System.EventHandler(this.UserInput);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(19, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 28);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "?";
             // 
             // Form1
             // 
@@ -1479,7 +1578,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Combination";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGameButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.check10_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.check9_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.check8_5)).EndInit();
@@ -1703,6 +1805,11 @@
         private PictureBox redBox;
         private PictureBox orangeBox;
         private PictureBox greenBox;
-        private PictureBox pictureBox1;
+        private PictureBox newGameButton;
+        private PictureBox pictureBox3;
+        private Label label1;
+        private PictureBox pictureBox2;
+        private Label label2;
+        private Label label3;
     }
 }

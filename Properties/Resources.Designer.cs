@@ -123,6 +123,16 @@ namespace Combination.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap newGame {
+            get {
+                object obj = ResourceManager.GetObject("newGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newGame1 {
             get {
                 object obj = ResourceManager.GetObject("newGame1", resourceCulture);
@@ -130,7 +140,15 @@ namespace Combination.Properties {
             }
         }
         
-
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no {
+            get {
+                object obj = ResourceManager.GetObject("no", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -148,6 +166,16 @@ namespace Combination.Properties {
         internal static System.Drawing.Bitmap redBall {
             get {
                 object obj = ResourceManager.GetObject("redBall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap textAGAIN {
+            get {
+                object obj = ResourceManager.GetObject("textAGAIN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

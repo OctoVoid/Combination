@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.endGame = new System.Windows.Forms.PictureBox();
+            this.rulesShow = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -142,8 +144,8 @@
             this.redBox = new System.Windows.Forms.PictureBox();
             this.orangeBox = new System.Windows.Forms.PictureBox();
             this.greenBox = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.endGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newGameButton)).BeginInit();
@@ -261,7 +263,8 @@
             // 
             this.panel1.BackgroundImage = global::Combination.Properties.Resources.board;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.endGame);
+            this.panel1.Controls.Add(this.rulesShow);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -379,6 +382,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(548, 781);
             this.panel1.TabIndex = 0;
+            // 
+            // endGame
+            // 
+            this.endGame.Image = global::Combination.Properties.Resources.textAGAIN;
+            this.endGame.Location = new System.Drawing.Point(159, 335);
+            this.endGame.Name = "endGame";
+            this.endGame.Size = new System.Drawing.Size(247, 61);
+            this.endGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.endGame.TabIndex = 19;
+            this.endGame.TabStop = false;
+            // 
+            // rulesShow
+            // 
+            this.rulesShow.AutoSize = true;
+            this.rulesShow.BackColor = System.Drawing.Color.Transparent;
+            this.rulesShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rulesShow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.rulesShow.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rulesShow.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rulesShow.Location = new System.Drawing.Point(19, 13);
+            this.rulesShow.Name = "rulesShow";
+            this.rulesShow.Size = new System.Drawing.Size(23, 28);
+            this.rulesShow.TabIndex = 18;
+            this.rulesShow.Text = "?";
+            this.rulesShow.Click += new System.EventHandler(this.ShowRules);
             // 
             // label2
             // 
@@ -1552,20 +1580,6 @@
             this.greenBox.Tag = "1";
             this.greenBox.Click += new System.EventHandler(this.UserInput);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(19, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 28);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "?";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1579,6 +1593,7 @@
             this.Text = "Combination";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.endGame)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newGameButton)).EndInit();
@@ -1810,6 +1825,7 @@
         private Label label1;
         private PictureBox pictureBox2;
         private Label label2;
-        private Label label3;
+        private Label rulesShow;
+        private PictureBox endGame;
     }
 }

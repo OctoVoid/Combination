@@ -7,6 +7,8 @@ namespace Combination
         int roundNum = 0;
         int inputInRound = 0;
         int number;
+        int correctNum = 0;
+        bool gameOver = false;
         PictureBox picInput;
         List<List<PictureBox>> gamePlan;
         List<List<PictureBox>> checkPlan;
@@ -27,6 +29,8 @@ namespace Combination
         public Form1()
         {
             InitializeComponent();
+            endGame.Visible = false;
+
             gamePlan = new List<List<PictureBox>>() {
                                                     new List<PictureBox> {this.box1_1, this.box1_2, this.box1_3, this.box1_4, this.box1_5 },
                                                     new List<PictureBox> {this.box2_1, this.box2_2, this.box2_3, this.box2_4, this.box2_5 },
@@ -55,17 +59,20 @@ namespace Combination
 
         private void NewGame(object sender, EventArgs e)
         {
+            endGame.Visible = false;
+            gameOver = false;
             MakingCombination();
             roundNum = 0;
             inputInRound = 0;
             gamePlan.ForEach(x => x.ForEach(y => y.Image = null));   //deletes the input images from last game
+            checkPlan.ForEach(x => x.ForEach(y => y.Image = null));
         }
-
 
         public void NewRound()  //new round, new row in game
         {
             roundNum++;
             inputInRound = 0;
+            correctNum = 0;
         }
 
         public void MakingCombination()   // making combination to guess
@@ -86,34 +93,64 @@ namespace Combination
         {
             picInput = sender as PictureBox;
 
+            if (gameOver)
+            {
+                return;
+            }
+
             if (!gamePlan[roundNum].Any(x => x.Image == colors[picInput.Tag.ToString()]))
             {
                 gamePlan[roundNum][inputInRound].Image = colors[picInput.Tag.ToString()];
+                gamePlan[roundNum][inputInRound].Tag = picInput.Tag;
                 inputInRound++;
             }
 
             if (inputInRound == 5)
             {
                 GuessCheck();
+                if (correctNum == 5)
+                {
+                    GameOver();
+                }
                 NewRound();
             }
 
             if (roundNum == 10)
             {
+
                 GameOver();
             }
         }
 
         private void GuessCheck()
         {
+            for (int i = 0; i < inputInRound; i++)
+            {
+                if (combination[i] == gamePlan[roundNum][i].Tag)
+                {
+                    checkPlan[roundNum][i].Image = Properties.Resources.yes;
+                    correctNum++;
+                    continue;
+                }
 
+                if (combination.Any(x => x == gamePlan[roundNum][i].Tag))
+                {
+                    checkPlan[roundNum][i].Image = Properties.Resources.move;
+                    continue;
+                }
+            }
         }
 
         private void GameOver()
         {
+            endGame.Visible = true;
+            gameOver = true;
 
         }
 
-        
+        private void ShowRules(object sender, EventArgs e)
+        {
+            new Rules().ShowDialog();   // shows rules
+        }
     }
 }
